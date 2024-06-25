@@ -1,0 +1,134 @@
+$color_1: #dee3de;
+$color_2: #f5f3ef;
+$color_3: #34544c;
+$font-family_1: inter;
+$background-color_1: #34544c;
+$background-color_2: #f5f3ef;
+
+.modal-login {
+	display: none;
+}
+
+#blackdrop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.form-login {
+	width: 400px;
+	height: auto;
+	position: absolute;
+	z-index: 11;
+	top: 90px;
+	right: 25px;
+	padding: 20px;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	font-family: $font-family_1;
+	color: $color_1;
+	cursor: default;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -30px;
+		right: -5px;
+		transform: rotate(9deg);
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 60px solid $color_3;
+		border-radius: 20px;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	form {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		margin-top: 30px;
+
+		.animate-input {
+			width: 100%;
+			height: auto;
+			position: relative;
+			margin: 15px 0 5px 0;
+
+			label {
+				top: 20px;
+				left: 10px;
+				position: absolute;
+				color: $color_3;
+				font-weight: 600;
+				font-size: 16px;
+
+				transition: 0.3s ease-out;
+			}
+
+			input:focus+label {
+				top: 15px;
+				font-size: 10px;
+			}
+
+			.labelactive{
+				top: 15px;
+				font-size: 10px;
+			}
+
+			input {
+				width: 97%;
+				height: 40px;
+				border: none;
+				border-radius: 5px;
+				margin-top: 10px;
+				padding: 15px 10px 5px 10px;
+				font-family: $font-family_1;
+				font-size: 18px;
+				background-color: $background-color_2;
+			}
+		}
+
+		span {
+			width: 90%;
+			margin-top: 5px;
+			font-size: 0.7rem;
+			font-style: italic;
+		}
+
+		#forgot {
+			width: 90%;
+			margin-top: 15px;
+
+			a {
+				color: $color_2;
+				text-decoration: underline !important;
+			}
+		}
+
+		button {
+			padding: 3px 15px;
+			margin-top: 40px;
+			background-color: $background-color_2;
+			border: none;
+			border-radius: 7px;
+			font-family: $font-family_1;
+			font-weight: 600;
+			font-size: 0.9rem;
+			color: $color_3;
+			cursor: pointer;
+		}
+	}
+}

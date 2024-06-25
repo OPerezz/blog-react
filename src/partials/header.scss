@@ -1,0 +1,145 @@
+$color_1: #8a9e96;
+$color_2: #34544c;
+$color_3: #dee3de;
+$font-family_1: inter;
+$background-color_1: transparent;
+$background-color_2: #dee3de;
+$background-color_3: #34544c;
+
+@keyframes arrow-login {
+     0% {
+          left: 0;
+     }
+
+     40% {
+          left: 5%;
+     }
+
+     100% {
+          left: 0;
+     }
+}
+
+.header {
+     width: 100%;
+     height: auto;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     .logo {
+          width: 100%;
+          height: 100%;
+          max-width: 200px;
+
+          img {
+               width: 100%;
+               height: auto;
+               max-width: 100px;
+          }
+     }
+
+     nav {
+          width: 100%;
+          height: auto;
+          max-width: 750px;
+          position: relative;
+
+          ul {
+               width: 100%;
+               height: auto;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 5px 0;
+
+               a {
+                    display: block;
+                    width: max-content;
+                    height: 100%;
+                    text-align: center;
+                    border: none;
+                    margin: 0;
+                    background-color: $background-color_1;
+                    padding: 10px 20px;
+                    font-family: $font-family_1;
+                    color: $color_1;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    box-sizing: border-box;
+
+                    &:hover {
+                         cursor: pointer;
+
+                         &:not(:last-child) {
+                              .menu-grow {
+                                   scale: 1.4;
+                                   transition: scale 0.5s, margin 0.2s;
+                                   margin-bottom: 15px;
+                              }
+                         }
+
+                         .live-demo {
+                              background-color: $background-color_3;
+                              color: $color_3;
+                              transition: background-color 0.1s ease-out, color 2s ease-out;
+                         }
+                    }
+
+                    li {
+                         width: 100%;
+                         height: auto;
+                         transition: scale 0.5s, margin 0.2s;
+                    }
+
+                    .live-demo {
+                         padding: 12px 30px;
+                         background-color: $background-color_2;
+                         color: $color_2;
+                         font-weight: 700;
+                         border-radius: 10px;
+                         transition: background-color 0.1s ease-out, color 2s ease-out;
+                    }
+               }
+
+               button {
+                    display: block;
+                    width: max-content;
+                    height: 100%;
+                    text-align: center;
+                    border: none;
+                    margin: 0;
+                    background-color: $background-color_1;
+                    padding: 10px 20px;
+                    font-family: $font-family_1;
+                    color: $color_1;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    box-sizing: border-box;
+
+                    cursor: pointer;
+
+                    &:hover {
+                         cursor: pointer;
+
+                         &:last-child {
+                              .menu-grow {
+                                   position: relative;
+                                   animation: arrow-login 0.2s ease-in;
+                              }
+                         }
+                    }
+
+                    &:last-child {
+                         .menu-grow {
+                              img {
+                                   width: 40px;
+                                   height: auto;
+                                   transform: rotate(180deg);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
