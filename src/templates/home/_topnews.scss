@@ -1,0 +1,111 @@
+.top-news {
+     &__inner {
+          &__hero {
+               max-height: 590px;
+               height: 580px;
+               cursor: pointer;
+
+               .content-hero {
+                    &__left {
+                         flex-direction: column;
+                         justify-content: center ;
+                         width: 40%;
+                         padding: 0 25px 120px 25px;
+                         background-color: $background-color_1;
+                         border-radius: 50px 0 0 50px;
+                         color: $color_2;
+                         font-family: $font_1;
+                         position: relative;
+
+                         h3 {
+                              font-size: 70px;
+                              font-weight: 600;
+                              letter-spacing: 1px;
+                              line-height: 75px;
+                         }
+
+                         h4 {
+                              font-size: 24px;
+                              line-height: 30px;
+                              margin-top: 30px;
+                         }
+
+                         .hero__btn__container {
+                              height: fit-content;
+
+                              button {
+                                   width: fit-content;
+                                   height: auto;
+                                   background-color: transparent;
+                                   border: none;
+                                   padding: 0 20px 0 0;
+                                   display: flex;
+                                   justify-content: center;
+                                   align-items: center;
+                                   cursor: pointer;
+                                   z-index: 1;
+                                   position: absolute;
+                                   bottom: 50px;
+                                   color: $color_2;
+
+                                   &::before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 100px;
+                                        background-color: #fd661a;
+                                        left: 0px;
+                                        top: 0;
+                                        z-index: 0;
+                                        transition: left 1.7s ease, width 1s ease;
+                                   }
+
+                                   .arrow {
+                                        width: 50px;
+                                        height: 50px;
+                                        display: flex;
+                                        align-items: center;
+                                        background-color: $component_orange;
+                                        border-radius: 50%;
+                                        font-size: 25px;
+                                        margin-right: 20px;
+                                        position: relative;
+                                        z-index: 1;
+
+                                        span {
+                                             width: fit-content;
+                                             height: auto;
+                                             position: relative;
+                                             left: 50%;
+                                             transform: translateX(-50%);
+                                        }
+                                   }
+
+                                   p {
+                                        font-family: $font_1;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        position: relative;
+                                        z-index: 1;
+                                   }
+                              }
+                         }
+                    }
+
+                    &__right {
+                         width: 60%;
+                         border-radius: 0 50px 0 0;
+                         background-image: url(../../../public/img/max-verstappen.webp);
+                         background-position: center;
+                         background-repeat: no-repeat;
+                         background-size: cover;
+                    }
+               }
+
+               &:hover .hero__btn__container button::before {
+                    width: 100%;
+               }
+          }
+     }
+}

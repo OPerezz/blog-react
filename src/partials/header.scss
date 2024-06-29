@@ -70,6 +70,7 @@ $background-color_3: #34544c;
 
                     &:hover {
                          cursor: pointer;
+                         color: $color_2;
 
                          &:not(:last-child) {
                               .menu-grow {

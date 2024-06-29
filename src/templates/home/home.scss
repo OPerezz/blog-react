@@ -1,15 +1,24 @@
 $color_1: #dee3de;
 $color_2: #f5f3ef;
-$color_3: #34544c;
+$color_3: #1c4f4a;
 $color_4: #1e2725;
 
-$font-family_1: inter;
-$background-color_1: #34544c;
+$font_1: "Raleway", sans-serif;
+$background-color_1: #1c4f4a;
 $background-color_2: #f5f3ef;
+$component_orange: #fd661a;
 $big-title: 60px;
 $big-text: 20px;
 $normal-text: 16px;
 
+*{
+     box-sizing: border-box;
+}
+
+.flex{
+     display: flex;
+}
 
 
-@import 'navblog'
+
+@import '_navblog','_topnews'

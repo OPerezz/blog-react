@@ -1,12 +1,16 @@
 import React from "react";
-import NavBlog from './NavBlog'
+import NavBlog from './Navblog'
+import Topnews from './Topnews'
 
 
 import './home.scss'
 
-function BlogF1 (){
-     return(
-          <NavBlog />
+function BlogF1() {
+     return (
+          <>
+               <NavBlog />
+               <Topnews />
+          </>
      )
 }
 
